@@ -1,0 +1,743 @@
+{
+  "project": {
+    "name": "默认离线项目",
+    "description": "",
+    "details": {
+      "markList": [
+        {
+          "key": "developing",
+          "name": "开发中",
+          "color": "#3A86FF",
+          "is_default": true
+        },
+        {
+          "key": "complated",
+          "name": "已完成",
+          "color": "#2BA58F",
+          "is_default": true
+        },
+        {
+          "key": "modifying",
+          "name": "需修改",
+          "color": "#EC4646",
+          "is_default": true
+        }
+      ],
+      "script": {
+        "pre_script": "",
+        "test": ""
+      },
+      "request": {
+        "query": [],
+        "header": [],
+        "body": []
+      }
+    }
+  },
+  "apis": [
+    {
+      "target_type": "api",
+      "name": "文件转让",
+      "mark": "developing",
+      "sort": 8,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/file/owen/update",
+      "request": {
+        "url": "127.0.0.1:8888/user/file/owen/update",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n \"user_identity\":\"0931c6db-cdef-4373-80b6-d0ab6d564fdd\",\n \"identity\":\"e86cc444-7f54-4059-b286-beacb37aa66f\",\n}",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "用户文件列表",
+      "mark": "developing",
+      "sort": 5,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/file/list",
+      "request": {
+        "url": "127.0.0.1:8888/user/file/list",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "文件下载",
+      "mark": "developing",
+      "sort": 4,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/file/download",
+      "request": {
+        "url": "127.0.0.1:8888/file/download",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n    \"identity\": \"bef4ea7d-de4b-4627-a6d6-18aa4aa45da1\",\n}",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "邮件接口",
+      "mark": "developing",
+      "sort": 2,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/mail/code/send",
+      "request": {
+        "url": "127.0.0.1:8888/user/mail/code/send",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n    \"email\":\"12@qq.com\"\n}",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "分享列表",
+      "mark": "developing",
+      "sort": 10,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/file/share/list",
+      "request": {
+        "url": "127.0.0.1:8888/user/file/share/list",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n    \n}",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "注册接口",
+      "mark": "developing",
+      "sort": 1,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/register",
+      "request": {
+        "url": "127.0.0.1:8888/user/register",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n    \"name\":\"test2\",\n    \"password\":\"12345\",\n    \"email\":\"12@qq.com\",\n    \"code\":\"91100741\"\n}\n",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "文件上传",
+      "mark": "developing",
+      "sort": 3,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/file/upload",
+      "request": {
+        "url": "127.0.0.1:8888/file/upload",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "form-data",
+          "parameter": [
+            {
+              "description": "",
+              "field_type": "Object",
+              "is_checked": 1,
+              "key": "file",
+              "value": [
+                "/Users/paidx0/Pictures/牛客/6.png"
+              ],
+              "not_null": 1,
+              "type": "File",
+              "filename": "6.png",
+              "fileBase64": []
+            }
+          ],
+          "raw": "",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "分享文件下载",
+      "mark": "developing",
+      "sort": 11,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/file/share/detail",
+      "request": {
+        "url": "127.0.0.1:8888/user/file/share/detail",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n    \"identity\": \"9cac0a5b-96b6-4fc5-a8d7-82f755dbcbc3\"\n}",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "用户登录",
+      "mark": "developing",
+      "sort": 1,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/login",
+      "request": {
+        "url": "127.0.0.1:8888/user/login",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n    \"name\":\"test2\",\n    \"password\":\"12345\",\n}\n",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "修改文件名",
+      "mark": "developing",
+      "sort": 6,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/file/name/update",
+      "request": {
+        "url": "127.0.0.1:8888/user/file/name/update",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n \"identity\":\"9980d7c1-8bdf-4bcb-b834-a53aa6c06eac\",\n \"new_name\":\"testUpdate\"   \n}",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "删除文件",
+      "mark": "developing",
+      "sort": 7,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/file/delete",
+      "request": {
+        "url": "127.0.0.1:8888/user/file/delete",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n    \"identity\":\"f7e832f4-5454-467a-9f53-8762e8e45567\",\n}",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "拉取保存分享",
+      "mark": "developing",
+      "sort": 12,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/file/share/pull",
+      "request": {
+        "url": "127.0.0.1:8888/user/file/share/pull",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n    \"identity\":\"3adc1f79-3e66-4217-a0c4-ac0b93d9bdb9\",\n}",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    },
+    {
+      "target_type": "api",
+      "name": "文件分享",
+      "mark": "developing",
+      "sort": 9,
+      "method": "POST",
+      "mock": "{}",
+      "mock_url": "/user/file/share",
+      "request": {
+        "url": "127.0.0.1:8888/user/file/share",
+        "description": "",
+        "event": {
+          "pre_script": "",
+          "test": ""
+        },
+        "body": {
+          "mode": "json",
+          "parameter": [],
+          "raw": "{\n \"expired_time\":100,\n \"identity\":\"5aaccdb4-de57-465d-b3a5-b73696a145b0\"   \n}",
+          "raw_para": []
+        }
+      },
+      "response": {
+        "success": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "成功",
+            "isDefault": 1,
+            "code": 200,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        },
+        "error": {
+          "raw": "",
+          "parameter": [],
+          "expect": {
+            "name": "失败",
+            "isDefault": -1,
+            "code": 404,
+            "contentType": "json",
+            "verifyType": "schema",
+            "mock": "",
+            "schema": {}
+          }
+        }
+      },
+      "children": []
+    }
+  ],
+  "envs": [
+    {
+      "env_id": "-1",
+      "list": {},
+      "name": "默认环境",
+      "pre_url": ""
+    },
+    {
+      "env_id": "-2",
+      "list": {},
+      "name": "Mock环境",
+      "pre_url": ""
+    }
+  ]
+}

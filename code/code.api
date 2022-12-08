@@ -1,0 +1,203 @@
+service code-api {
+	@handler userlogin
+	post /user/login (LoginRequest) returns (LoginResponse)
+	
+	@handler userdetail
+	post /user/detail (DetailRequest) returns (DetailResponse)
+	
+	@handler mailsend
+	post /user/mail/code/send (MailSendRequest) returns (MailSendResponse)
+	
+	@handler userregister
+	post /user/register (UserRegisterRequest) returns (UserRegisterResponse)
+}
+
+@server(
+	middleware : Middleware
+)
+service code-api {
+	// 文件上传
+	@handler fileupload
+	post /file/upload (FileUploadRequest) returns (FileUploadResponse)
+	
+	// 用户对应的文件列表
+	@handler userfilelist
+	post /user/file/list (UserFileListRequest) returns (UserFileListResponse)
+	
+	// 文件名修改
+	@handler userfilenameupdate
+	post /user/file/name/update (UserFileNameUpdateRequest) returns (UserFileNameUpdateResponse)
+	
+	// 文件软删除
+	@handler userfiledelete
+	post /user/file/delete (UserFileDeleteRequest) returns (UserFileDeleteResponse)
+	
+	// 更新文件所有者(文件转让)
+	@handler userfileowenupdate
+	post /user/file/owen/update (UserFileOwenUpdateRequest) returns (UserFileOwenUpdateResponse)
+	
+	// 文件分享
+	@handler sharefile
+	post /user/file/share (ShareFileRequest) returns (ShareFileResponse)
+	
+	// 分享文件列表
+	@handler sharelist
+	post /user/file/share/list (ShareFileListRequest) returns (ShareFileListResponse)
+	
+	// 点击下载,点击次数+1
+	@handler sharefiledownload
+	post /user/file/share/detail (ShareFileDownloadRequest) returns (ShareFileDownloadResponse)
+	
+	// 分享文件拉取到用户仓库
+	@handler sharefilepull
+	post /user/file/share/pull (ShareFilePullRequest) returns (ShareFilePullResponse)
+	
+	// 文件下载
+	@handler filedownload
+	post /file/download (FileDownLoadRequest) returns (FileDownLoadResponse)
+}
+
+type FileDownLoadRequest {
+	Identity string `json:"identity"`
+}
+type FileDownLoadResponse {
+	Msg string `json:"msg"`
+}
+
+type ShareFilePullRequest {
+	Identity string `json:"identity"`
+}
+type ShareFilePullResponse {
+	Msg string `json:"msg"`
+}
+
+type ShareFileDownloadRequest {
+	Identity string `json:"identity"`
+}
+type ShareFileDownloadResponse {
+	Msg string `json:"msg"`
+}
+
+type ShareFileListRequest {
+	PageNum  int `json:"page,optional"`
+	PageSize int `json:"size,optional"`
+}
+type ShareFileListResponse {
+	Count int64        `json:"count"`
+	List  []*ShareFile `json:"list"`
+}
+type ShareFile {
+	Identity    string `json:"identity"`
+	Name        string `json:"name"`
+	Ext         string `json:"ext"`
+	Path        string `json:"path"`
+	Size        int64  `json:"size"`
+	ExpiredTime int    `json:"expired_time"`
+	ClickNum    int    `json:"click_num"`
+}
+
+type ShareFileRequest {
+	ExpiredTime int    `json:"expired_time"`
+	Identity    string `json:"identity"`
+}
+type ShareFileResponse {
+	Msg      string `json:"msg"`
+	Identity string `json:"identity"`
+}
+
+type UserFileOwenUpdateRequest {
+	Identity     string `json:"identity"`
+	UserIdentity string `json:"user_identity"`
+}
+
+type UserFileOwenUpdateResponse {
+	Msg string `json:"msg"`
+}
+
+type UserFileDeleteRequest {
+	Identity string `json:"identity"`
+}
+type UserFileDeleteResponse {
+	Msg string `json:"msg"`
+}
+
+type UserFileNameUpdateRequest {
+	Identity string `json:"identity"`
+	NewName  string `json:"new_name"`
+}
+type UserFileNameUpdateResponse {
+	Msg string `json:"msg"`
+}
+
+type UserFileListRequest {
+	PageNum  int `json:"page,optional"`
+	PageSize int `json:"size,optional"`
+}
+type UserFileListResponse {
+	Count int64       `json:"count"`
+	List  []*UserFile `json:"list"`
+}
+type UserFile {
+	Id                 int64  `json:"id"`
+	Identity           string `json:"identity"`
+	RepositoryIdentity string `json:"repository_identity"`
+	Name               string `json:"name"`
+	Ext                string `json:"ext"`
+	Path               string `json:"path"`
+	Size               int64  `json:"size"`
+}
+
+type UserRepositorySaveRequest {
+	ParentId           int64  `json:"parentId"`
+	RepositoryIdentity string `json:"repository_identity"`
+	Ext                string `json:"ext"`
+	Name               string `json:"name"`
+}
+type UserRepositorySaveResponse {
+}
+
+type FileUploadRequest {
+	Hash string `json:"hash,optional"`
+	Name string `json:"name,optional"`
+	Ext  string `json:"ext,optional"`
+	Size int64  `json:"size,optional"`
+	Path string `json:"path,optional"`
+}
+type FileUploadResponse {
+	Identity string `json:"identity"`
+	Ext      string `json:"ext"`
+	Name     string `json:"name"`
+}
+
+type LoginRequest {
+	Name     string `json:"name"`
+	Password string `json:"password"`
+}
+type LoginResponse {
+	Token string `json:"token"`
+}
+
+type DetailRequest {
+	Identity string `json:"identity"`
+}
+type DetailResponse {
+	Name  string `json:"name"`
+	Email string `json:"email"`
+}
+
+type MailSendRequest {
+	Email string `json:"email"`
+}
+type MailSendResponse {
+	Msg string `json:"msg"`
+}
+
+type UserRegisterRequest {
+	Name     string `json:"name"`
+	Password string `json:"password"`
+	Email    string `json:"email"`
+	Code     string `json:"code"`
+}
+type UserRegisterResponse {
+	Msg string `json:"msg"`
+}

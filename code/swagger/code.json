@@ -1,0 +1,912 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "",
+    "version": ""
+  },
+  "host": "127.0.0.1:8888",
+  "basePath": "/api",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/file/download": {
+      "post": {
+        "operationId": "filedownload",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/FileDownLoadResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FileDownLoadRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/file/upload": {
+      "post": {
+        "operationId": "fileupload",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/FileUploadResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FileUploadRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/detail": {
+      "post": {
+        "operationId": "userdetail",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/DetailResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DetailRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/file/delete": {
+      "post": {
+        "operationId": "userfiledelete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserFileDeleteResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserFileDeleteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/file/list": {
+      "post": {
+        "operationId": "userfilelist",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserFileListResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserFileListRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/file/name/update": {
+      "post": {
+        "operationId": "userfilenameupdate",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserFileNameUpdateResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserFileNameUpdateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/file/owen/update": {
+      "post": {
+        "operationId": "userfileowenupdate",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserFileOwenUpdateResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserFileOwenUpdateRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/file/share": {
+      "post": {
+        "operationId": "sharefile",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ShareFileResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ShareFileRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/file/share/detail": {
+      "post": {
+        "operationId": "sharefiledownload",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ShareFileDownloadResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ShareFileDownloadRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/file/share/list": {
+      "post": {
+        "operationId": "sharelist",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ShareFileListResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ShareFileListRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/file/share/pull": {
+      "post": {
+        "operationId": "sharefilepull",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/ShareFilePullResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ShareFilePullRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/login": {
+      "post": {
+        "operationId": "userlogin",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LoginResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LoginRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/mail/code/send": {
+      "post": {
+        "operationId": "mailsend",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/MailSendResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MailSendRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    },
+    "/user/register": {
+      "post": {
+        "operationId": "userregister",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserRegisterResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserRegisterRequest"
+            }
+          }
+        ],
+        "tags": [
+          "code-api"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "DetailRequest": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string"
+        }
+      },
+      "title": "DetailRequest",
+      "required": [
+        "identity"
+      ]
+    },
+    "DetailResponse": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      },
+      "title": "DetailResponse",
+      "required": [
+        "name",
+        "email"
+      ]
+    },
+    "FileDownLoadRequest": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string"
+        }
+      },
+      "title": "FileDownLoadRequest",
+      "required": [
+        "identity"
+      ]
+    },
+    "FileDownLoadResponse": {
+      "type": "object",
+      "properties": {
+        "msg": {
+          "type": "string"
+        }
+      },
+      "title": "FileDownLoadResponse",
+      "required": [
+        "msg"
+      ]
+    },
+    "FileUploadRequest": {
+      "type": "object",
+      "properties": {
+        "hash": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "ext": {
+          "type": "string"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "title": "FileUploadRequest"
+    },
+    "FileUploadResponse": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string"
+        },
+        "ext": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "FileUploadResponse",
+      "required": [
+        "identity",
+        "ext",
+        "name"
+      ]
+    },
+    "LoginRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "title": "LoginRequest",
+      "required": [
+        "name",
+        "password"
+      ]
+    },
+    "LoginResponse": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "LoginResponse",
+      "required": [
+        "token"
+      ]
+    },
+    "MailSendRequest": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      },
+      "title": "MailSendRequest",
+      "required": [
+        "email"
+      ]
+    },
+    "MailSendResponse": {
+      "type": "object",
+      "properties": {
+        "msg": {
+          "type": "string"
+        }
+      },
+      "title": "MailSendResponse",
+      "required": [
+        "msg"
+      ]
+    },
+    "ShareFile": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "ext": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "expired_time": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "click_num": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "ShareFile",
+      "required": [
+        "identity",
+        "name",
+        "ext",
+        "path",
+        "size",
+        "expired_time",
+        "click_num"
+      ]
+    },
+    "ShareFileDownloadRequest": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string"
+        }
+      },
+      "title": "ShareFileDownloadRequest",
+      "required": [
+        "identity"
+      ]
+    },
+    "ShareFileDownloadResponse": {
+      "type": "object",
+      "properties": {
+        "msg": {
+          "type": "string"
+        }
+      },
+      "title": "ShareFileDownloadResponse",
+      "required": [
+        "msg"
+      ]
+    },
+    "ShareFileListRequest": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "ShareFileListRequest"
+    },
+    "ShareFileListResponse": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ShareFile"
+          }
+        }
+      },
+      "title": "ShareFileListResponse",
+      "required": [
+        "count",
+        "list"
+      ]
+    },
+    "ShareFilePullRequest": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string"
+        }
+      },
+      "title": "ShareFilePullRequest",
+      "required": [
+        "identity"
+      ]
+    },
+    "ShareFilePullResponse": {
+      "type": "object",
+      "properties": {
+        "msg": {
+          "type": "string"
+        }
+      },
+      "title": "ShareFilePullResponse",
+      "required": [
+        "msg"
+      ]
+    },
+    "ShareFileRequest": {
+      "type": "object",
+      "properties": {
+        "expired_time": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "identity": {
+          "type": "string"
+        }
+      },
+      "title": "ShareFileRequest",
+      "required": [
+        "expired_time",
+        "identity"
+      ]
+    },
+    "ShareFileResponse": {
+      "type": "object",
+      "properties": {
+        "msg": {
+          "type": "string"
+        },
+        "identity": {
+          "type": "string"
+        }
+      },
+      "title": "ShareFileResponse",
+      "required": [
+        "msg",
+        "identity"
+      ]
+    },
+    "UserFile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "identity": {
+          "type": "string"
+        },
+        "repository_identity": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "ext": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserFile",
+      "required": [
+        "id",
+        "identity",
+        "repository_identity",
+        "name",
+        "ext",
+        "path",
+        "size"
+      ]
+    },
+    "UserFileDeleteRequest": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string"
+        }
+      },
+      "title": "UserFileDeleteRequest",
+      "required": [
+        "identity"
+      ]
+    },
+    "UserFileDeleteResponse": {
+      "type": "object",
+      "properties": {
+        "msg": {
+          "type": "string"
+        }
+      },
+      "title": "UserFileDeleteResponse",
+      "required": [
+        "msg"
+      ]
+    },
+    "UserFileListRequest": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "UserFileListRequest"
+    },
+    "UserFileListResponse": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserFile"
+          }
+        }
+      },
+      "title": "UserFileListResponse",
+      "required": [
+        "count",
+        "list"
+      ]
+    },
+    "UserFileNameUpdateRequest": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string"
+        },
+        "new_name": {
+          "type": "string"
+        }
+      },
+      "title": "UserFileNameUpdateRequest",
+      "required": [
+        "identity",
+        "new_name"
+      ]
+    },
+    "UserFileNameUpdateResponse": {
+      "type": "object",
+      "properties": {
+        "msg": {
+          "type": "string"
+        }
+      },
+      "title": "UserFileNameUpdateResponse",
+      "required": [
+        "msg"
+      ]
+    },
+    "UserFileOwenUpdateRequest": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string"
+        },
+        "user_identity": {
+          "type": "string"
+        }
+      },
+      "title": "UserFileOwenUpdateRequest",
+      "required": [
+        "identity",
+        "user_identity"
+      ]
+    },
+    "UserFileOwenUpdateResponse": {
+      "type": "object",
+      "properties": {
+        "msg": {
+          "type": "string"
+        }
+      },
+      "title": "UserFileOwenUpdateResponse",
+      "required": [
+        "msg"
+      ]
+    },
+    "UserRegisterRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        }
+      },
+      "title": "UserRegisterRequest",
+      "required": [
+        "name",
+        "password",
+        "email",
+        "code"
+      ]
+    },
+    "UserRegisterResponse": {
+      "type": "object",
+      "properties": {
+        "msg": {
+          "type": "string"
+        }
+      },
+      "title": "UserRegisterResponse",
+      "required": [
+        "msg"
+      ]
+    },
+    "UserRepositorySaveRequest": {
+      "type": "object",
+      "properties": {
+        "parentId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "repository_identity": {
+          "type": "string"
+        },
+        "ext": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "UserRepositorySaveRequest",
+      "required": [
+        "parentId",
+        "repository_identity",
+        "ext",
+        "name"
+      ]
+    },
+    "UserRepositorySaveResponse": {
+      "type": "object",
+      "title": "UserRepositorySaveResponse"
+    }
+  },
+  "securityDefinitions": {
+    "apiKey": {
+      "type": "apiKey",
+      "description": "Enter JWT Bearer token **_only_**",
+      "name": "Authorization",
+      "in": "header"
+    }
+  }
+}
