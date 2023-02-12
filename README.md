@@ -47,9 +47,7 @@ https://github.com/jordan-wright/email
   - [x] Token鉴权
 - [x] 存储仓库操作
   - [x] 文件上传
-  （小文件上传，大了会413）
   - [x] 分块上传
-  （大文件上传，这里遇到问题就是411，直接用FormFile像普通上传拿到就会这样，后面换成了bytes.NewReader(buf)，同样都是拿到一个reader为什么前者出错，另外留坑还有点小问题）
   - [x] 上传的文件添加到用户仓库
   - [x] 用户拥有文件列表
   - [x] 文件下载
